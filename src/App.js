@@ -2,6 +2,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import React, { Component } from "react";
 import Home from "./components/Home";
+import ListView from "./components/ListView";
 
 // function App() {
 //   return (
@@ -26,7 +27,10 @@ import Home from "./components/Home";
 
 class App extends Component {
   render() {
-    return <Home/>;
+    return <>
+    <Home/>
+    <ListView/>
+    </>;
   }
 }
 

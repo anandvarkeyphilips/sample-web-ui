@@ -3,6 +3,7 @@ import "./App.css";
 import React, { Component } from "react";
 import Home from "./components/Home";
 import ListView from "./components/ListView";
+import SalaryList from "./components/SalaryList";
 
 // function App() {
 //   return (
@@ -26,10 +27,23 @@ import ListView from "./components/ListView";
 // }
 
 class App extends Component {
+
+  constructor(){
+    super()
+    this.employees = [
+      { id: 1, name: "Sonu", salary: 10000, department: "IT" },
+      { id: 2, name: "Ravi", salary: 20000, department: "HR" },
+      { id: 3, name: "Arun", salary: 30000, department: "Finance" },
+      { id: 4, name: "Rahul", salary: 40000, department: "IT" },
+      { id: 5, name: "Ajay", salary: 50000, department: "HR" }
+  ];
+  this.title="Employees List"
+  }
   render() {
     return <>
     <Home/>
-    <ListView/>
+    <ListView message={this.title} employees={this.employees}/>
+    <SalaryList/>
     </>;
   }
 }

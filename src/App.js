@@ -1,9 +1,9 @@
-import logo from "./logo.svg";
 import "./App.css";
 import React, { Component } from "react";
 import Home from "./components/Home";
 import ListView from "./components/ListView";
 import SalaryList from "./components/SalaryList";
+import Calculator from "./components/Calculator";
 
 // function App() {
 //   return (
@@ -43,6 +43,7 @@ class App extends Component {
     return (
       <>
         <Home />
+        <Calculator/>
         <ListView message={this.title} employees={this.employees} />
         <SalaryList title={"Salary of Employees"} data={this.employees}/>
       </>

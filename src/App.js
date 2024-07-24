@@ -4,6 +4,7 @@ import Home from "./components/Home";
 import ListView from "./components/ListView";
 import SalaryList from "./components/SalaryList";
 import Calculator from "./components/Calculator";
+import Greeter from "./components/Greeter";
 
 // function App() {
 //   return (
@@ -46,6 +47,7 @@ class App extends Component {
         <Calculator/>
         <ListView message={this.title} employees={this.employees} />
         <SalaryList title={"Salary of Employees"} data={this.employees}/>
+        <Greeter/>
       </>
     );
   }
